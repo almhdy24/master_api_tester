@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.request-section {
+    margin-bottom: 20px;
+}
+
+.request-section h1 {
+    color: #0078d7;
+}
+
+input,
+select,
+button,
+textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005f8e;
+}
+label {
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.response-section {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #0078d7;
+}
+
+/* Loading indicator style */
+.loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+/* Header section */
+#responseHeaders,
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#responseHeaders li {
+    margin-bottom: 5px;
+}
+
+#responseHeaders li strong {
+    font-weight: bold;
+}
+
+/* Response section */
+.response-section {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    overflow: auto;
+}
+
+pre {
+    white-space: pre-wrap;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Courier New", Courier, monospace;
+}
+/* Target all div elements that contain collapsible content */
+div.collapsible > .content {
+    display: none;
+}
+
+div.collapsible > .label {
+    cursor: pointer;
+    color: #0D6EF1;
+}
+
+div.collapsible > .label:after {
+    content: "\25B6"; /* Unicode for right arrow icon */
+    margin-right: 5px;
+    color: #aaa;
+}
+
+div.collapsible.open > .label:after {
+    content: "\25BC"; /* Unicode for down arrow icon */
+}
+
+div.collapsible.open > .content {
+    display: block;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
