@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/index.css" />
+        <title>MASTER API TESTER</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/images/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/images/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/assets/images/favicon-16x16.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link
+            rel="mask-icon"
+            href="/assets/images/safari-pinned-tab.svg"
+            color="#5bbad5" />
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta
+            name="msapplication-config"
+            content="/assets/images/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="request-section">
+                <h1>Master API Client</h1>
+                <select id="method">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="DELETE">DELETE</option>
+                </select>
+                <input
+                    type="text"
+                    id="url"
+                    placeholder="Enter URL"
+                    value="https://jsonplaceholder.typicode.com/posts/1" />
+                <button id="sendRequest">
+                    <i class="fas fa-send"></i> Send Request
+                </button>
+                <div>
+                    <label for="params">Parameters:</label>
+                    <textarea
+                        id="params"
+                        placeholder="Enter your JSON object here">
+{}</textarea
+                    >
+                </div>
+            </div>
+            <div
+                class="loading-indicator"
+                id="loadingIndicator"
+                style="display: none">
+                <i class="fas fa-spinner fa-spin"></i> Loading...
+            </div>
+            <div class="response-section">
+                <section>
+                    <h2>Response Headers</h2>
+                    <ul id="responseHeaders"></ul>
+                </section>
+
+                <section>
+                    <h2>Response Body</h2>
+                    <pre id="responseBody"></pre>
+                </section>
+            </div>
+        </div>
+        <script src="assets/js/index.js"></script>
+    </body>
+</html>
